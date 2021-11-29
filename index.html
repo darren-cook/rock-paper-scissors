@@ -5,20 +5,27 @@
         let computerAns
         if (computerNum == 0) {
             computerAns = 'Rock';
-            console.log(computerAns)
+            return(computerAns)
         }   else if (computerNum == 1) {
             computerAns = 'Paper';
-            console.log(computerAns)
+            return(computerAns)
         }   else {
             computerAns = 'Scissors';
-            console.log(computerAns)
+            return(computerAns)
         }
     }
 
-    computerPlay()
-    computerPlay()
-    computerPlay()
-    computerPlay()
-    computerPlay()
-    computerPlay()
+    function userPlay() {
+        let userAns;
+        while (!(userAns == "Rock" || userAns == "Paper" || userAns == "Scissors")) {
+            userAns = prompt("Rock, Paper, or Scissors?");
+            userAns = (userAns[0].toUpperCase() + userAns.slice(1).toLowerCase())
+        }
+        return (userAns)
+        }
+    // tests
+    // let a = computerPlay();
+    // let b = userPlay();
+    // console.log(a)
+    // console.log(b)
 </script>
