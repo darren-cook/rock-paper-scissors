@@ -21,11 +21,34 @@
             userAns = prompt("Rock, Paper, or Scissors?");
             userAns = (userAns[0].toUpperCase() + userAns.slice(1).toLowerCase())
         }
-        return (userAns)
+        return (userAns);
         }
+
+    function playRound(computerSelection, userSelection) {
+        if (computerSelection == userSelection) {
+            return(`Tie! Both players selected ${computerSelection}`)
+        }   else if (computerSelection == "Rock" && userSelection == "Paper") {
+            return(`You win! ${computerSelection} loses against your ${userSelection}`)
+        }   else if (computerSelection == "Rock" && userSelection == "Scissors") {
+            return(`You lose! ${computerSelection} wins against your ${userSelection}`)
+        }   else if (computerSelection == "Paper" && userSelection == "Rock") {
+            return(`You lose! ${computerSelection} wins against your ${userSelection}`)
+        }   else if (computerSelection == "Paper" && userSelection == "Scissors") {
+            return(`You win! ${computerSelection} loses against your ${userSelection}`)
+        }   else if (computerSelection == "Scissors" && userSelection == "Rock") {
+            return(`You win! ${computerSelection} loses against your ${userSelection}`)
+        }   else if (computerSelection == "Scissors" && userSelection == "Paper") {
+            return(`You lose! ${computerSelection} wins against your ${userSelection}`)
+        }
+    }
+
+
+
+
     // tests
     // let a = computerPlay();
     // let b = userPlay();
     // console.log(a)
     // console.log(b)
+    console.log(playRound(computerPlay(), userPlay()))
 </script>
