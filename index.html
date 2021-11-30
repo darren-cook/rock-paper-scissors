@@ -42,13 +42,35 @@
         }
     }
 
+    function game(numGames) {
+        let userScore = 0;
+        let compScore = 0;
+        let winner
+        for (let i = 0; i < numGames; i++) {
+            let result = playRound(computerPlay(), userPlay());
+            console.log(result)
+            let check = result.slice(0, 5)
+            if (check == "You w") {
+                userScore++
+            }   else if (check == "You l") {
+                compScore++
+            } 
+            console.log(`User: ${userScore} vs. Computer: ${compScore}`)
+        }
+        if (userScore == compScore) {
+            winner = "tie";
+            console.log("There is no winner! It is a tie!");
+        }   else if (userScore > compScore) {
+            winner = "User";
+        }   else {
+            winner = "Computer"
+        }
+        if (winner == "User" || winner == "Computer") {
+            console.log(`The winner is ${winner}!`)
+        }
+    }
 
 
+    (game(5))
 
-    // tests
-    // let a = computerPlay();
-    // let b = userPlay();
-    // console.log(a)
-    // console.log(b)
-    console.log(playRound(computerPlay(), userPlay()))
 </script>
