@@ -11,13 +11,12 @@ const gameTitle = document.querySelector(".gameTitle");
 const gameFlex = document.querySelector("#gameFlex");
 const winner = document.querySelector("#winner");
 const buttons = document.querySelector(".buttons");
-
+const userBtns = document.querySelectorAll(".userBtn");
+const compBtns = document.querySelectorAll(".compBtn");
 
 let uScore = 0;
 let cScore = 0;
 let round = 0;
-
-
 
 
 startBtn.addEventListener("click", function(){
@@ -63,6 +62,7 @@ function resetGame() {
     gameFlex.innerText = "Choose Wisely"
     winner.innerText = ""
     buttons.style.display = "flex";
+    uncolorBtn();
     while (result.firstChild) {
         result.removeChild(result.firstChild);
     }
@@ -91,6 +91,7 @@ function computerSelection() {
 }
 
 function playRound(computerSelection, userSelection) {
+    uncolorBtn();
     switch (computerSelection + " " + userSelection) {
         case "Rock Rock":
         case "Paper Paper":
@@ -108,6 +109,22 @@ function playRound(computerSelection, userSelection) {
             gameWin(computerSelection, userSelection);
             break;
     }
+    colorBtn(computerSelection, userSelection);
+}
+
+function colorBtn (computerSelection, userSelection) {
+    document.getElementById("comp"+computerSelection).style.border = "3px solid #E59500";
+    document.getElementById(userSelection).style.border = "3px solid #E59500";
+
+}
+
+function uncolorBtn() {
+    compBtns.forEach(function(item){
+        item.style.border = "none";
+    })
+    userBtns.forEach(function(item){
+        item.style.border = "none";
+    })
 }
 
 function gameTie(computerSelection, userSelection){

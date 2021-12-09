@@ -1,0 +1,35 @@
+[33mcommit d63a6c0e657b3a92aa31bddd2510e586a3257540[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: darren-cook <darren.j.cook@uconn.edu>
+Date:   Wed Dec 8 23:49:47 2021 -0500
+
+    added ui and updated js
+
+[33mcommit 32e832b7083a6137e131e8c7e7723d1b7c5122fc[m[33m ([m[1;31morigin/rps-ui[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: darren-cook <darren.j.cook@uconn.edu>
+Date:   Mon Nov 29 20:32:07 2021 -0500
+
+    finished game function and inital js portion of project.
+
+[33mcommit 45ecf984117756750175f950443dab30f635007b[m
+Author: darren-cook <darren.j.cook@uconn.edu>
+Date:   Mon Nov 29 19:53:42 2021 -0500
+
+    finished playRound function.
+
+[33mcommit 305515ac75e40b3832b5fa4c9ce6e9cbbf62d5a7[m
+Author: darren-cook <darren.j.cook@uconn.edu>
+Date:   Mon Nov 29 17:08:29 2021 -0500
+
+    added userPlay function.
+
+[33mcommit f52bfac5708c2566cb685eba43ad9ff665c768ce[m
+Author: darren-cook <darren.j.cook@uconn.edu>
+Date:   Mon Nov 29 12:15:53 2021 -0500
+
+    computers random function setup.
+
+[33mcommit a49024441e5833499ffadd9314bc60d7f4072295[m
+Author: darren-cook <94792311+darren-cook@users.noreply.github.com>
+Date:   Mon Nov 29 10:53:42 2021 -0500
+
+    Initial commit
