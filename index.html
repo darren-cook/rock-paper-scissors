@@ -1,76 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors!</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Rock, Paper, Scissors</h1>
+        <h3 class="subTitle">First to Five</h3>
+        <h1 id="winner"></h1>
+    </header>
+    <button type="button" class="controlBtn" id="startBtn">Start</button>
+    <button type="button" class="controlBtn" id="resetBtn">Reset</button>
+    </div>
+    <div class="gameContainer" id="gameContainer">
+        <div class="game">
+            <div class="gameTitle">
+                <h3 id="gameFlex">Choose Wisely:</h3>
+            </div>
+            <div class="buttons">
+                <div class="user">
+                    <button type="button" class="userBtn" id="Rock">Rock</button>
+                    <button type="button" class="userBtn" id="Paper">Paper</button>
+                    <button type="button" class="userBtn" id="Scissors">Scissors</button>
+                </div>
+                <div class="comp">
+                    <button type="button" class="compBtn" id="compRock" disabled>Rock</button>
+                    <button type="button" class="compBtn" id="compPaper" disabled>Paper</button>
+                    <button type="button" class="compBtn" id="compScissors" disabled>Scissors</button>
+                </div>
+            </div>
+            <div class="scoreboard" id="scoreboard">
+                <div class="playerBox">
+                    <h2 id="userScore">0</h2>
+                    <h2 class="userTitle">User</h2>
+                </div>
+                <div class="playerBox">
+                    <h2 id="compScore">0</h2>
+                    <h2 class="compTitle">Comp</h2>
+                </div>
+            </div>
+        </div>
 
-<script>
-    function computerPlay() {
-        let computerNum = Math.floor(Math.random() * 4);
-        let computerAns
-        if (computerNum == 0) {
-            computerAns = 'Rock';
-            return(computerAns)
-        }   else if (computerNum == 1) {
-            computerAns = 'Paper';
-            return(computerAns)
-        }   else {
-            computerAns = 'Scissors';
-            return(computerAns)
-        }
-    }
-
-    function userPlay() {
-        let userAns;
-        while (!(userAns == "Rock" || userAns == "Paper" || userAns == "Scissors")) {
-            userAns = prompt("Rock, Paper, or Scissors?");
-            userAns = (userAns[0].toUpperCase() + userAns.slice(1).toLowerCase())
-        }
-        return (userAns);
-        }
-
-    function playRound(computerSelection, userSelection) {
-        if (computerSelection == userSelection) {
-            return(`Tie! Both players selected ${computerSelection}`)
-        }   else if (computerSelection == "Rock" && userSelection == "Paper") {
-            return(`You win! ${computerSelection} loses against your ${userSelection}`)
-        }   else if (computerSelection == "Rock" && userSelection == "Scissors") {
-            return(`You lose! ${computerSelection} wins against your ${userSelection}`)
-        }   else if (computerSelection == "Paper" && userSelection == "Rock") {
-            return(`You lose! ${computerSelection} wins against your ${userSelection}`)
-        }   else if (computerSelection == "Paper" && userSelection == "Scissors") {
-            return(`You win! ${computerSelection} loses against your ${userSelection}`)
-        }   else if (computerSelection == "Scissors" && userSelection == "Rock") {
-            return(`You win! ${computerSelection} loses against your ${userSelection}`)
-        }   else if (computerSelection == "Scissors" && userSelection == "Paper") {
-            return(`You lose! ${computerSelection} wins against your ${userSelection}`)
-        }
-    }
-
-    function game(numGames) {
-        let userScore = 0;
-        let compScore = 0;
-        let winner
-        for (let i = 0; i < numGames; i++) {
-            let result = playRound(computerPlay(), userPlay());
-            console.log(result)
-            let check = result.slice(0, 5)
-            if (check == "You w") {
-                userScore++
-            }   else if (check == "You l") {
-                compScore++
-            } 
-            console.log(`User: ${userScore} vs. Computer: ${compScore}`)
-        }
-        if (userScore == compScore) {
-            winner = "tie";
-            console.log("There is no winner! It is a tie!");
-        }   else if (userScore > compScore) {
-            winner = "User";
-        }   else {
-            winner = "Computer"
-        }
-        if (winner == "User" || winner == "Computer") {
-            console.log(`The winner is ${winner}!`)
-        }
-    }
+        <div class="resultboard" id="result">
+            <h4 class="resultTitle">Results:</h3>
+        </div>
+    </div>
+</body>
+</html>
 
 
-    (game(5))
-
-</script>

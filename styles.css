@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #2D3142;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    background-color: #2D3142;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.gameContainer{
+    width: 66%;
+    margin: 50px;
+    color: #FFFFFF;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+}
+
+#winner{
+    padding-top: 20px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.controlBtn {
+    background-color: #A7B0CA;
+    border: none;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: large;
+    margin-top: 50px;
+}
+
+#startBtn {
+    display: flex;
+}
+
+#resetBtn {
+    display: none;
+}
+
+.userBtn {
+    background-color: #A7B0CA;
+    border: none;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.userBtn:hover{
+    transform: scale(1.1);
+    background-color: #8D98B9;
+}
+
+.compBtn {
+    background-color: #A7B0CA;
+    border: none;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: not-allowed;
+}
+
+.gameTitle{
+    text-align: center;
+    margin: 10px;
+}
+
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.playerBox{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.resultboard {
+    padding-top: 50px;
+}
